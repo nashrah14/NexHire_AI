@@ -104,21 +104,14 @@ export default function Footer() {
                     <h3 className="text-white font-semibold mb-4">Follow Us</h3>
                     <div className="flex items-center space-x-4">
                         <a
-                            href="https://instagram.com"
-                            target="_blank"
-                            className="text-gray-400 hover:text-[#45e35d] transition-all"
-                        >
-                            <Instagram size={28} />
-                        </a>
-                        <a
-                            href="https://linkedin.com"
+                            href="https://www.linkedin.com/in/avinashpappala"
                             target="_blank"
                             className="text-gray-400 hover:text-[#45e35d] transition-all"
                         >
                             <Linkedin size={28} />
                         </a>
                         <a
-                            href="https://github.com"
+                            href="https://github.com/Avinash829"
                             target="_blank"
                             className="text-gray-400 hover:text-[#45e35d] transition-all"
                         >
