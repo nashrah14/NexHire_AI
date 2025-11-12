@@ -88,7 +88,7 @@ export default function Footer() {
                         </li>
                         <li className="flex items-center gap-2">
                             <Mail size={16} className="text-[#45e35d]" />
-                            <span>campusconnect@zohomail.in</span>
+                            <span>avinashpappala@gmail.com</span>
                         </li>
                         <li>
                             <p className="text-gray-500 text-xs">
