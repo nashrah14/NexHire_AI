@@ -2,7 +2,7 @@
 
 ### AI-Powered Career Accelerator for Students & Professionals
 
-NexHire AI is an intelligent career preparation platform that helps students and job seekers ace technical interviews, improve coding skills, and discover internship opportunities—all in one place.
+NexHire AI is an intelligent career preparation platform that helps students and job seekers ace technical interviews, improve coding skills, and discover internship opportunities, all in one place.
 
 ---
 
