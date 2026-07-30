@@ -62,7 +62,6 @@ Whether you're preparing for placements, internship interviews, or improving you
 
 ---
 
-## 📸 Screenshots
 
 ### 🏠 Home
 
