@@ -1,88 +1,121 @@
-# 🌐 CampusConnect
+# 💙 NexHire AI
 
-**AI-powered Career Accelerator for Students & Professionals**  
-Empowering learners to connect with internships, sharpen coding skills, and prepare for interviews — all in one smart platform.
+### AI-Powered Career Accelerator for Students & Professionals
+
+NexHire AI is an intelligent career preparation platform that helps students and job seekers ace technical interviews, improve coding skills, and discover internship opportunities—all in one place.
 
 ---
 
 ## 🌐 Live Demo
 
-🎯 **Try it live:** [https://campusconnect829.vercel.app](https://campusconnect829.vercel.app)
+🔗 **Frontend:** https://your-vercel-link.vercel.app
 
-Deployed on **Vercel** with a **FastAPI backend** hosted on **Render**.
-
+🔗 **Backend API:** https://your-render-link.onrender.com
 
 ---
 
 ## 🚀 Overview
 
-CampusConnect is your **AI Career Assistant** that helps you:
+NexHire AI combines AI-powered career tools into a single modern platform.
 
-- 🎯 Get **personalized interview prep** using AI
-- 💻 Practice **coding challenges** tailored to your skill level
-- 💼 Discover **internships and jobs** powered by live APIs
-- 🤖 Use intelligent tools to boost your confidence and career growth
-
-Built with **Next.js**, **FastAPI**, and **AI-powered services**, CampusConnect combines technology and career readiness in one seamless experience.
+Whether you're preparing for placements, internship interviews, or improving your programming skills, NexHire AI provides personalized resources to help you succeed.
 
 ---
 
 ## ✨ Features
 
-### 🧠 AI Interviewer
-- Upload your resume and job role.
-- Get **personalized interview questions**.
-- Receive **real-time feedback and tips**.
-- Practice as many times as needed.
+### 🤖 AI Mock Interviews
 
-### 💼 Internship Finder
-- Explore top internship opportunities fetched from a live **FastAPI backend**.
-- Get real-time listings from leading tech companies.
-- Find your ideal internship easily.
+- Upload your resume
+- Enter your target job role
+- Generate personalized interview questions
+- Practice unlimited mock interviews
+- Receive AI-powered feedback and suggestions
+
+---
 
 ### 💻 Coding Practice
-- Solve **AI-curated coding problems** (LeetCode-style).
-- Adaptive learning: questions evolve with your progress.
-- Practice for DSA, system design, and logic-based interviews.
 
+- Solve curated coding problems
+- Improve DSA and problem-solving skills
+- Adaptive difficulty based on progress
+- Practice interview-focused questions
 
 ---
 
-## 🖼️ Screens & Highlights
+### 💼 Internship Explorer
 
-### 🏠 Home Page
-- AI Career Assistant introduction
-- Quick navigation to Interviews, Jobs, and Coding
+- Browse internship opportunities
+- Real-time listings from backend APIs
+- Search and filter opportunities
+- View detailed internship information
 
-### 🎤 AI Interview Page
+---
+
+### 🎯 Modern User Experience
+
+- Beautiful AI-inspired UI
+- Responsive across devices
+- Fast navigation
+- Smooth animations
+- Dark theme with blue-purple gradients
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Home
+
+- AI-powered landing page
+- Career roadmap
+- Quick access to platform features
+
+### 🎤 AI Interview
+
 - Resume upload
-- Question generation & feedback
+- Personalized question generation
+- Interactive interview experience
 
-### 💼 Internships Page
-- Live opportunities from backend
-- Filters & detailed job info
+### 💼 Internship Portal
 
-### 🧩 Coding Practice
-- Interactive coding challenges
-- Role-based question suggestions
+- Browse internships
+- Search & filter opportunities
+- Company details
+
+### 💻 Coding Practice
+
+- Coding challenges
+- Interview preparation
+- Progress tracking
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
-**Frontend:**  
-- Next.js 14 (App Router)  
-- React  
-- Tailwind CSS  
-- Lucide Icons  
-- ShadCN UI Components  
+## Frontend
 
-**Backend:**  
-- FastAPI  
-- Python  
-- CORS Middleware  
-- dotenv  
+- Next.js 14 (App Router)
+- React
+- Tailwind CSS
+- Lucide React
+- ShadCN UI
 
-**Deployment:**  
-- Vercel (Frontend)  
-- Render (Backend API)
+## Backend
+
+- FastAPI
+- Python
+- CORS Middleware
+- dotenv
+
+## AI
+
+- Google Gemini API
+- Resume-based question generation
+- AI-powered interview assistance
+
+## Deployment
+
+- Vercel (Frontend)
+- Render (Backend)
+
+---
