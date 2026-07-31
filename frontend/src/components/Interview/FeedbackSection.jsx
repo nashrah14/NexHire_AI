@@ -30,7 +30,7 @@ export default function FeedbackSection({ feedback }) {
                     <h1 className="text-3xl font-extrabold text-indigo-400 mb-2">
                         💬 AI Interview Feedback
                     </h1>
-                    <p className="text-gray-400 text-sm">
+                    <p className="text-[#b4bcd0] text-sm">
                         Automatically generated insights from your mock
                         interview
                     </p>
@@ -49,7 +49,7 @@ export default function FeedbackSection({ feedback }) {
 
                 {feedback.strengths?.length > 0 && (
                     <section className="mb-8">
-                        <h2 className="text-2xl font-semibold text-green-400 mb-3">
+                        <h2 className="text-2xl font-semibold text-blue-400 mb-3">
                             ✅ Strengths
                         </h2>
                         <ul className="list-disc list-inside space-y-2 text-gray-300">
@@ -106,7 +106,7 @@ export default function FeedbackSection({ feedback }) {
                             </button>
                         ) : (
                             <div className="flex flex-col items-center justify-center gap-3 mt-6">
-                                <div className="animate-spin rounded-full h-10 w-10 border-t-4 border-[#45e35d]"></div>
+                                <div className="animate-spin rounded-full h-10 w-10 border-t-4 border-[#4f8cff]"></div>
                                 <p className="text-gray-300 text-sm">
                                     Returning to home...
                                 </p>

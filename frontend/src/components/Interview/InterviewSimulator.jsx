@@ -149,20 +149,20 @@ export default function InterviewSimulator({ questions }) {
             {!isInterviewStarted ? (
                 <button
                     onClick={handleStartInterview}
-                    className="bg-green-500 px-6 py-3 rounded text-xl font-semibold hover:bg-green-600"
+                    className="bg-blue-600 px-6 py-3 rounded text-xl font-semibold hover:bg-gradient-to-r from-cyan-500 via-blue-600 to-violet-600"
                 >
                     Start Interview
                 </button>
             ) : isProcessing ? (
                 <div className="flex flex-col items-center justify-center gap-3">
-                    <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-green-400"></div>
+                    <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-blue-400"></div>
                     <p className="text-gray-300 text-lg">
                         Processing your responses...
                     </p>
                 </div>
             ) : readyForFeedback ? (
                 <div className="flex flex-col items-center gap-4">
-                    <p className="text-green-400 text-lg font-medium">
+                    <p className="text-blue-400 text-lg font-medium">
                         You have successfully completed your Interview
                     </p>
                     <button
@@ -189,7 +189,7 @@ export default function InterviewSimulator({ questions }) {
 
                     <video
                         ref={videoRef}
-                        className="mt-8 rounded-xl border border-gray-700 w-80 h-60 bg-black"
+                        className="mt-8 rounded-xl border border-gray-700 w-80 h-60 bg-[#050816]"
                         muted
                         autoPlay
                         playsInline

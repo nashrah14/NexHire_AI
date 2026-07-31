@@ -14,7 +14,7 @@ export default function LayoutWrapper({ children }) {
 
     return (
         <>
-            <div className="bg-black">
+            <div className="bg-[#050816]">
                 {!isFullScreen && <Navbar />}
                 <div className={!isFullScreen ? "pt-24" : ""}>{children}</div>
                 {!isFullScreen && <Footer />}

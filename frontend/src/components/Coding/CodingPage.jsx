@@ -54,24 +54,24 @@ export default function CodingPage() {
     };
 
     return (
-        <div className="flex flex-col min-h-screen bg-black text-white">
+        <div className="flex flex-col min-h-screen bg-[#050816] text-white">
             <main className="flex flex-1">
                 {/* LEFT PANEL (Form + Logo) */}
-                <aside className="w-full md:w-[35%] lg:w-[30%] bg-[#111] border-r border-gray-800 p-8 flex flex-col items-center sticky top-0 h-screen">
+                <aside className="w-full md:w-[35%] lg:w-[30%] bg-[#0d1224] border-r border-[#243056] p-8 flex flex-col items-center sticky top-0 h-screen">
                     {/* Logo + Title */}
                     <div className="flex flex-col items-center mb-10 space-y-3">
                         <Image
                             onClick={() => router.push("/")}
                             src="/logo.svg"
-                            alt="CampusConnect Logo"
+                            alt="NexHire AI Logo"
                             width={200}
                             height={50}
                             className="object-contain transform transition-transform duration-500 hover:scale-110 hover:cursor-pointer"
                         />
-                        <h1 className="text-2xl font-bold text-[#45e35d] text-center">
+                        <h1 className="text-2xl font-bold text-[#4f8cff] text-center">
                             AI Coding Assistant
                         </h1>
-                        <p className="text-gray-400 text-sm text-center">
+                        <p className="text-[#b4bcd0] text-sm text-center">
                             Generate coding challenges tailored to your role and
                             skill level.
                         </p>
@@ -92,7 +92,7 @@ export default function CodingPage() {
                             <button
                                 onClick={fetchQuestions}
                                 disabled={loading}
-                                className="bg-[#45e35d] text-black font-semibold px-6 py-3 rounded-xl hover:bg-[#39d152] transition-all duration-200 w-full disabled:opacity-60 disabled:cursor-not-allowed"
+                                className="bg-[#4f8cff] text-black font-semibold px-6 py-3 rounded-xl hover:bg-[#39d152] transition-all duration-200 w-full disabled:opacity-60 disabled:cursor-not-allowed"
                             >
                                 {loading ? (
                                     <span className="flex items-center gap-2 justify-center">
@@ -117,11 +117,11 @@ export default function CodingPage() {
                 <section className="flex-1 p-10 overflow-y-auto">
                     {questions.length === 0 && !loading ? (
                         <div className="max-w-3xl mx-auto text-center mt-20">
-                            <Code className="w-14 h-14 text-[#45e35d] mx-auto mb-6" />
+                            <Code className="w-14 h-14 text-[#4f8cff] mx-auto mb-6" />
                             <h2 className="text-4xl font-bold mb-4">
                                 Master Coding for Your Dream Role
                             </h2>
-                            <p className="text-gray-400 text-lg leading-relaxed">
+                            <p className="text-[#b4bcd0] text-lg leading-relaxed">
                                 Our AI curates coding problems that align with
                                 your career goals. Whether you are aiming for
                                 frontend, backend, or full-stack roles — we’ve
@@ -163,7 +163,7 @@ function FormFields({
                     placeholder="e.g. SDE, Frontend Developer"
                     value={jobTitle}
                     onChange={(e) => setJobTitle(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl bg-gray-900 border border-gray-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-[#45e35d]"
+                    className="w-full px-4 py-3 rounded-xl bg-gray-900 border border-gray-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-[#4f8cff]"
                 />
             </div>
 
@@ -174,7 +174,7 @@ function FormFields({
                 <select
                     value={difficulty}
                     onChange={(e) => setDifficulty(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl bg-gray-900 border border-gray-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-[#45e35d]"
+                    className="w-full px-4 py-3 rounded-xl bg-gray-900 border border-gray-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-[#4f8cff]"
                 >
                     <option>Easy</option>
                     <option>Medium</option>
@@ -190,7 +190,7 @@ function FormFields({
                     placeholder="Paste job description here..."
                     value={jobDescription}
                     onChange={(e) => setJobDescription(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl bg-gray-900 border border-gray-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-[#45e35d] min-h-[120px]"
+                    className="w-full px-4 py-3 rounded-xl bg-gray-900 border border-gray-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-[#4f8cff] min-h-[120px]"
                 />
             </div>
         </>
@@ -201,8 +201,8 @@ function QuestionGrid({ questions, loading }) {
     if (loading) {
         return (
             <div className="flex flex-col items-center justify-center mt-20">
-                <Loader2 className="animate-spin w-10 h-10 text-[#45e35d]" />
-                <p className="text-gray-400 mt-4">Generating questions...</p>
+                <Loader2 className="animate-spin w-10 h-10 text-[#4f8cff]" />
+                <p className="text-[#b4bcd0] mt-4">Generating questions...</p>
             </div>
         );
     }
@@ -212,19 +212,19 @@ function QuestionGrid({ questions, loading }) {
             {questions.map((q, i) => (
                 <div
                     key={i}
-                    className="bg-[#111] border border-gray-800 rounded-2xl p-6 hover:border-[#45e35d] hover:shadow-[0_0_20px_#45e35d30] transition-all duration-300"
+                    className="bg-[#0d1224] border border-[#243056] rounded-2xl p-6 hover:border-[#4f8cff] hover:shadow-[0_0_20px_#4f8cff30] transition-all duration-300"
                 >
                     <h3 className="text-xl font-semibold text-white mb-2">
                         {q.question_title}
                     </h3>
-                    <p className="text-gray-400 text-sm mb-4">
+                    <p className="text-[#b4bcd0] text-sm mb-4">
                         {q.topics || "—"}
                     </p>
                     <a
                         href={q.question_link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-[#45e35d] hover:text-[#3edb5a] font-medium"
+                        className="inline-flex items-center text-[#4f8cff] hover:text-[#3edb5a] font-medium"
                     >
                         Practice Now <ExternalLink className="ml-2 w-4 h-4" />
                     </a>

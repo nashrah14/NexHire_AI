@@ -12,7 +12,7 @@ export default function InterviewUI({ isRecording, isLast, onNext, onEnd }) {
                 {isLast ? "End Interview" : "Next Question"}
             </button>
 
-            <div className="text-gray-400 text-sm mt-2">
+            <div className="text-[#b4bcd0] text-sm mt-2">
                 {isRecording ? "Recording in progress..." : ""}
             </div>
         </div>

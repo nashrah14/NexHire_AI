@@ -45,12 +45,12 @@ export default function ResumeUploader({ onQuestionsReady }) {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white px-4 py-10 space-y-6">
+        <div className="flex flex-col items-center justify-center min-h-screen bg-[#050816] text-white px-4 py-10 space-y-6">
             {/* Logo at the Top */}
             <div className="flex flex-col items-center space-y-3 hover:cursor-pointer">
                 <Image
                     src="/logo.svg"
-                    alt="CampusConnect Logo"
+                    alt="NexHire AI Logo"
                     width={200}
                     height={60}
                     onClick={() => {
@@ -59,7 +59,7 @@ export default function ResumeUploader({ onQuestionsReady }) {
                     }}
                     className="object-contain transform transition-transform duration-500 hover:scale-110 hover:cursor-pointer"
                 />
-                <h1 className="text-3xl font-bold text-[#45e35d]">
+                <h1 className="text-3xl font-bold text-[#4f8cff]">
                     AI Resume Interviewer
                 </h1>
             </div>
@@ -73,7 +73,7 @@ export default function ResumeUploader({ onQuestionsReady }) {
                 </p>
                 <p className="text-sm text-gray-500">
                     Our system understands your strengths, experience, and
-                    aspirations — preparing you for your dream role.
+                    aspirations - preparing you for your dream role.
                 </p>
             </div>
 
@@ -121,13 +121,18 @@ export default function ResumeUploader({ onQuestionsReady }) {
                 {!loading ? (
                     <button
                         type="submit"
-                        className="bg-[#04c821] w-full py-2 rounded text-lg font-semibold hover:bg-[#08821c] transition-all"
-                    >
+                        className="w-full py-3 rounded-xl text-lg font-semibold text-white
+                        bg-gradient-to-r from-cyan-500 via-blue-600 to-violet-600
+                        hover:from-blue-600 hover:via-indigo-600 hover:to-violet-700
+                        transition-all duration-300
+                        shadow-lg hover:shadow-[0_0_25px_rgba(79,140,255,0.35)]
+                        hover:scale-[1.02]"
+>
                         Start Interview
                     </button>
                 ) : (
                     <div className="flex flex-col items-center justify-center gap-3 mt-2 mb-2">
-                        <div className="animate-spin rounded-full h-10 w-10 border-t-4 border-[#45e35d]"></div>
+                        <div className="animate-spin rounded-full h-10 w-10 border-t-4 border-[#4f8cff]"></div>
                         <p className="text-gray-300 text-sm">
                             Generating questions...
                         </p>
@@ -142,13 +147,19 @@ export default function ResumeUploader({ onQuestionsReady }) {
                         setHomeLoading(true);
                         router.push("/");
                     }}
-                    className="px-6 py-2 text-green-400 rounded-xl transition-all font-semibold border border-green-300 hover:rounded-full hover:bg-[#0a0a0a]"
+                    className="px-6 py-3 rounded-xl font-semibold text-[#4F8CFF]
+                            border border-[#4F8CFF]
+                            bg-[#0D1224]
+                            hover:bg-[#4F8CFF]/10
+                            hover:border-[#7B61FF]
+                            hover:text-white
+                            transition-all duration-300"
                 >
                     ← Go Back Home
                 </button>
             ) : (
                 <div className="flex flex-col items-center justify-center gap-3 mt-2">
-                    <div className="animate-spin rounded-full h-10 w-10 border-t-4 border-[#45e35d]"></div>
+                    <div className="animate-spin rounded-full h-10 w-10 border-t-4 border-[#4f8cff]"></div>
                     <p className="text-gray-300 text-sm">
                         Returning to home...
                     </p>

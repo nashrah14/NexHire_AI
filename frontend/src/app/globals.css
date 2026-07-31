@@ -1,14 +1,48 @@
 @import "tailwindcss";
 
-body {
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+@import "tailwindcss";
+
+:root {
+    /* Backgrounds */
+    --bg: #050816;
+    --surface: #0d1224;
+    --surface-light: #151c35;
+
+    /* Brand Colors */
+    --primary: #4f8cff;
+    --secondary: #7b61ff;
+    --accent: #30c5ff;
+
+    /* Text */
+    --text: #ffffff;
+    --text-secondary: #b4bcd0;
+
+    /* Borders */
+    --border: #243056;
+
+    /* Gradient */
+    --gradient: linear-gradient(
+        90deg,
+        #30c5ff 0%,
+        #4f8cff 50%,
+        #7b61ff 100%
+    );
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+
 button {
     cursor: pointer;
+    transition: all 0.3s ease;
 }
+body {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+
+}
+

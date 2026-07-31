@@ -3,102 +3,103 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import {
-    Home,
-    MonitorPlay,
-    Code as CodeIcon,
-    Briefcase,
-    Mail,
-} from "lucide-react";
 
 export default function Navbar() {
     const [active, setActive] = useState("Home");
 
     const tabs = [
-        { key: "Home", label: "Home", icon: Home, href: "#home" },
+        { key: "Home", label: "Home", href: "#home" },
         {
             key: "Interview",
-            label: "Interview",
-            icon: MonitorPlay,
+            label: "AI Interview",
             href: "#ai-interview",
         },
-        { key: "Jobs", label: "Jobs", icon: Briefcase, href: "#internships" },
-        { key: "Coding", label: "Coding", icon: CodeIcon, href: "#coding" },
-        { key: "Contact", label: "Contact", icon: Mail, href: "#contact" },
+        { key: "Jobs", label: "Jobs", href: "#internships" },
+        { key: "Coding", label: "Coding", href: "#coding" },
+        { key: "Contact", label: "Contact", href: "#contact" },
     ];
 
     useEffect(() => {
         const sections = tabs.map((tab) => document.querySelector(tab.href));
+
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        const visibleSection = tabs.find(
+                        const current = tabs.find(
                             (tab) => tab.href === `#${entry.target.id}`
                         );
-                        if (visibleSection) setActive(visibleSection.key);
+
+                        if (current) setActive(current.key);
                     }
                 });
             },
-            { threshold: 0.5 }
+            {
+                threshold: 0.5,
+            }
         );
 
         sections.forEach((sec) => sec && observer.observe(sec));
+
         return () => observer.disconnect();
     }, []);
 
     return (
-        <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[92%] md:w-1/2 z-50">
-            <div className="flex items-center justify-between bg-black/60 border border-[#2f2f2f] rounded-full shadow-[0_0_15px_rgba(69,227,93,0.15)] backdrop-blur-md px-6 py-3 transition-all duration-300 hover:shadow-[0_0_25px_rgba(69,227,93,0.3)]">
+        <nav className="fixed top-5 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl">
+            <div className="flex items-center justify-between rounded-full border border-[#243056] bg-[#0D1224]/80 backdrop-blur-xl px-8 py-4 shadow-[0_10px_40px_rgba(79,140,255,0.18)] transition-all duration-300 hover:shadow-[0_15px_50px_rgba(79,140,255,0.28)]">
                 {/* Logo */}
                 <Link
                     href="/#home"
+                    className="flex items-center"
                     onClick={() => setActive("Home")}
-                    className="flex items-center gap-2 hover:scale-105 transition-transform duration-300"
                 >
                     <Image
                         src="/logo.svg"
-                        alt="CampusConnect Logo"
-                        width={160}
-                        height={50}
-                        className="object-contain"
+                        alt="NexHire AI"
+                        width={150}
+                        height={42}
+                        priority
                     />
                 </Link>
 
-                {/* Navigation Tabs */}
-                <div className="hidden md:flex items-center space-x-8">
-                    {tabs.map((tab) => {
-                        const Icon = tab.icon;
-                        const isActive = active === tab.key;
+                {/* Desktop Navigation */}
+                <div className="hidden md:flex items-center gap-10">
+                    {tabs.map((tab) => (
+                        <a
+                            key={tab.key}
+                            href={tab.href}
+                            onClick={() => setActive(tab.key)}
+                            className={`group relative text-sm font-medium tracking-wide transition-all duration-300 ${
+                            active === tab.key
+                            ? "text-[#4F8CFF]"
+                            : "text-[#B4BCD0] hover:text-white"
+                            }`}
+                        >           
+                            {tab.label}
 
-                        return (
-                            <a
-                                key={tab.key}
-                                href={tab.href}
-                                onClick={() => setActive(tab.key)}
-                                className={`group relative flex items-center gap-2 text-[15px] font-medium transition-all duration-300 ${
-                                    isActive
-                                        ? "text-[#45e35d]"
-                                        : "text-gray-400 hover:text-white"
+                            <span
+                                className={`absolute -bottom-2 left-0 h-[3px] rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 transition-all duration-300 ${
+                                    active === tab.key
+                                        ? "w-full"
+                                        : "w-0 group-hover:w-full"
                                 }`}
-                            >
-                                <Icon
-                                    size={18}
-                                    strokeWidth={2}
-                                    className={`transition-transform duration-300 ${
-                                        isActive
-                                            ? "scale-110 text-[#45e35d]"
-                                            : "group-hover:scale-110"
-                                    }`}
-                                />
-                                {tab.label}
-
-                                {/* Underline animation */}
-                                <span className="absolute bottom-[-5px] left-0 h-[2px] bg-[#45e35d] rounded-full transition-all duration-300 w-0 group-hover:w-full"></span>
-                            </a>
-                        );
-                    })}
+                            />
+                        </a>
+                    ))}
                 </div>
+
+                {/* CTA Button */}
+                <Link
+                    href="#ai-interview"
+                    className="hidden md:flex items-center rounded-full bg-gradient-to-r from-cyan-500 via-blue-600 to-violet-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(79,140,255,0.35)]"
+                >
+                    Get Started
+                </Link>
+
+                {/* Mobile Menu Button */}
+                <button className="md:hidden text-white">
+                    ☰
+                </button>
             </div>
         </nav>
     );

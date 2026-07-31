@@ -31,7 +31,7 @@ export default function HomePage() {
     }, []);
 
     return (
-        <main className="bg-black text-white min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
+        <main className="bg-[#050816] text-white min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
             {/* Custom Cursor */}
             <Background />
             <Cursor />
@@ -40,14 +40,14 @@ export default function HomePage() {
             <section className="w-full max-w-6xl flex flex-col md:flex-row items-center justify-between px-6 md:px-10 pt-32 pb-24 h-full">
                 {/* Left Section */}
                 <div className="flex-1 space-y-6 text-center md:text-left">
-                    <span className="text-[#45e35d] text-sm uppercase tracking-wider">
+                    <span className="text-[#4f8cff] text-sm uppercase tracking-wider">
                         AI Career Assistant
                     </span>
                     <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
                         Accelerate Your{" "}
-                        <span className="text-[#45e35d]">Career Journey</span>
+                        <span className="text-[#4f8cff]">Career Journey</span>
                     </h1>
-                    <p className="text-gray-400 text-lg max-w-md mx-auto md:mx-0">
+                    <p className="text-[#b4bcd0] text-lg max-w-md mx-auto md:mx-0">
                         Get AI-powered interview prep, coding practice, and job
                         discovery — built for ambitious learners like you.
                     </p>
@@ -57,7 +57,7 @@ export default function HomePage() {
                         <button
                             onClick={handleClick}
                             disabled={loading}
-                            className={`border bg-[#45e35d] text-black px-5 py-3 rounded-xl font-semibold hover:border-[#0df22f] hover:bg-black hover:text-[#45e35d] transition-all duration-200 flex items-center justify-center space-x-2 ${
+                            className={`border bg-[#4f8cff] text-black px-5 py-3 rounded-xl font-semibold hover:border-[#7b61ff] hover:bg-[#050816] hover:text-[#4f8cff] transition-all duration-200 flex items-center justify-center space-x-2 ${
                                 loading ? "opacity-80 cursor-not-allowed" : ""
                             }`}
                         >
@@ -70,7 +70,7 @@ export default function HomePage() {
                                     .getElementById("ai-interview")
                                     ?.scrollIntoView({ behavior: "smooth" });
                             }}
-                            className="border border-gray-600 text-gray-300 px-5 py-3 rounded-xl hover:border hover:border-[#0df22f] hover:bg-black hover:text-[#45e35d] transition-all duration-200"
+                            className="border border-gray-600 text-gray-300 px-5 py-3 rounded-xl hover:border hover:border-[#7b61ff] hover:bg-[#050816] hover:text-[#4f8cff] transition-all duration-200"
                         >
                             Learn More
                         </button>
@@ -84,13 +84,13 @@ export default function HomePage() {
                         alt="AI Illustration"
                         width={480}
                         height={360}
-                        className="rounded-2xl shadow-[0_0_40px_#45e35d20]"
+                        className="rounded-2xl shadow-[0_0_40px_#4f8cff20]"
                     />
                 </div>
             </section>
 
             {/* Features Section */}
-            <section className="w-full py-20 bg-[#0a0a0a] border-t border-gray-800 mt-30">
+            <section className="w-full py-20 bg-[#0a0a0a] border-t border-[#243056] mt-30">
                 <div className="max-w-6xl mx-auto px-6 md:px-10 text-center">
                     <h2 className="text-3xl font-bold mb-12 text-white">
                         Smart Tools for Smart Careers
@@ -115,13 +115,13 @@ export default function HomePage() {
                         ].map(({ icon: Icon, title, desc }) => (
                             <div
                                 key={title}
-                                className="p-8 bg-[#111] border border-gray-800 rounded-2xl hover:border-[#45e35d] hover:shadow-[0_0_25px_#45e35d40] transition-all duration-300"
+                                className="p-8 bg-[#0d1224] border border-[#243056] rounded-2xl hover:border-[#4f8cff] hover:shadow-[0_0_25px_#4f8cff40] transition-all duration-300"
                             >
-                                <Icon className="w-10 h-10 text-[#45e35d] mx-auto mb-4" />
+                                <Icon className="w-10 h-10 text-[#4f8cff] mx-auto mb-4" />
                                 <h3 className="text-xl font-semibold mb-2">
                                     {title}
                                 </h3>
-                                <p className="text-gray-400 mb-6">{desc}</p>
+                                <p className="text-[#b4bcd0] mb-6">{desc}</p>
                             </div>
                         ))}
                     </div>
