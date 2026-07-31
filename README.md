@@ -8,7 +8,7 @@ NexHire AI is an intelligent career preparation platform that helps students and
 
 ## 🌐 Live Demo
 
-🔗 **Frontend:** 
+🔗 https://nexhire-ai-nash.vercel.app/ 
 
 ---
 
