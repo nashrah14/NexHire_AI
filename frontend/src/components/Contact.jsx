@@ -35,7 +35,7 @@ export default function ContactPage() {
                                 href="tel:+916300768805"
                                 className="text-gray-300 hover:text-[#4f8cff] transition-colors"
                             >
-                                +91 12345 67890
+                                +91 80749 93925
                             </a>
                         </div>
 
