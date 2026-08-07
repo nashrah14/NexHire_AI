@@ -82,18 +82,17 @@ export default function Footer() {
                         Contact Us
                     </h3>
                     <ul className="space-y-3 text-sm">
-                        <li className="flex items-center gap-2">
+                        {/* <li className="flex items-center gap-2">
                             <Phone size={16} className="text-[#4f8cff]" />
                             <span>+91 80749 93925</span>
-                        </li>
+                        </li> */}
                         <li className="flex items-center gap-2">
                             <Mail size={16} className="text-[#4f8cff]" />
                             <span>nashrahfathima14@gmail.com</span>
                         </li>
                         <li>
                             <p className="text-gray-500 text-xs">
-                                For hiring or collaboration, reach us via email
-                                or call directly.
+                                For hiring or collaboration, reach us via email.
                             </p>
                         </li>
                     </ul>
