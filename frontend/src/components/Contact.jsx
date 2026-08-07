@@ -29,7 +29,7 @@ export default function ContactPage() {
                     </p>
 
                     <div className="flex flex-col items-center justify-center space-y-4 mt-6">
-                        <div className="flex items-center space-x-3">
+                        {/* <div className="flex items-center space-x-3">
                             <Phone className="text-[#4f8cff] w-6 h-6" />
                             <a
                                 href="tel:+916300768805"
@@ -37,7 +37,7 @@ export default function ContactPage() {
                             >
                                 +91 80749 93925
                             </a>
-                        </div>
+                        </div> */}
 
                         <div className="flex items-center space-x-3">
                             <Mail className="text-[#4f8cff] w-6 h-6" />
