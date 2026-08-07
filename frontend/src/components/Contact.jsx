@@ -60,7 +60,7 @@ export default function ContactPage() {
                         For partnership, hiring, or contract opportunities,
                         please reach out to us via{" "}
                         <span className="text-[#4f8cff] font-semibold">
-                            email or phone number above
+                            email above
                         </span>
                         . Let’s build something amazing together!
                     </p>
